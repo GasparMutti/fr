@@ -1,0 +1,154 @@
+@font-face {
+  font-family: Work Sans;
+  src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Work Sans, sans-serif;
+  --white: hsl(0, 0%, 100%);
+  --lightPink: hsl(275, 100%, 97%);
+  --grayishPurple: hsl(292, 16%, 49%);
+  --darkPurple: hsl(292, 42%, 14%);
+  --accent-color: hsl(281, 83%, 54%);
+  color: var(--darkPurple);
+}
+
+p {
+  max-width: 60ch;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--lightPink);
+
+  header {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.faqs__container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: -96px 24px 24px 24px;
+  padding: 0 24px;
+  background: var(--white);
+  border-radius: 8px;
+
+  header {
+    width: 100%;
+    padding-top: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    gap: 24px;
+
+    img {
+      width: 32px;
+    }
+  }
+}
+
+.faq {
+  padding: 24px 0;
+  border-bottom: 2px solid var(--lightPink);
+
+  .faq__question {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    label {
+      font-size: 20px;
+      font-weight: 600;
+      text-wrap: balance;
+      cursor: pointer;
+      margin-right: auto;
+    }
+
+    picture {
+      padding: 15px;
+      aspect-ratio: 1/1;
+      position: relative;
+
+      img {
+        position: absolute;
+        inset: 0;
+      }
+
+      .openButton {
+        transition: scale 0.5s ease, display 0.5s ease allow-discrete;
+      }
+
+      .closeButton {
+        display: none;
+        scale: 0;
+        transition: scale 0.5s ease, display 0.5s ease allow-discrete;
+      }
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  .faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+
+    p {
+      color: var(--grayishPurple);
+    }
+  }
+
+  &:has(:checked) .faq__answer {
+    max-height: 200px;
+    padding-top: 24px;
+  }
+
+  &:has(:checked) .faq__question {
+    color: var(--accent-color);
+
+    .openButton {
+      display: none;
+      scale: 0;
+      transition: scale 0.5s ease, display 0.5s ease allow-discrete;
+    }
+
+    .closeButton {
+      display: block;
+      scale: 1;
+      transition: scale 0.5s ease;
+
+      @starting-style {
+        scale: 0;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 32px;
+}
