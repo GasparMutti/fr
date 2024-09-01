@@ -23,6 +23,7 @@ p {
   max-width: 60ch;
   font-size: 16px;
   line-height: 1.6;
+  text-wrap: balance;
 }
 
 body {
@@ -50,27 +51,28 @@ body {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  margin: -96px 24px 24px 24px;
-  padding: 0 24px;
+  margin: -148px 32px 32px 32px;
+  padding: 0 32px;
   background: var(--white);
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
   header {
     width: 100%;
-    padding-top: 24px;
-    font-size: 24px;
+    padding: 32px 0;
+    font-size: 42px;
     font-weight: 700;
     display: flex;
-    gap: 24px;
+    gap: 16px;
 
     img {
-      width: 32px;
+      width: 42px;
     }
   }
 }
 
 .faq {
-  padding: 24px 0;
+  padding: 32px 0;
   border-bottom: 2px solid var(--lightPink);
 
   .faq__question {
