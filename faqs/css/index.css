@@ -153,4 +153,6 @@ body {
 
 footer {
   padding: 32px;
+  margin: 0 auto;
+  text-align: center;
 }
