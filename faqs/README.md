@@ -30,12 +30,13 @@ Users should be able to:
 
 ### Screenshots
 
-![](./screenshot.jpg)
+![mobile](./assets/images/mobileScreenshot.png)
+![desktop](./assets/images/desktopScreenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/GasparMutti/frontendMentor/tree/main/faqs)
+- Live Site URL: [Github](https://gasparmutti.github.io/frontendMentor/faqs/index.html)
 
 ## My process
 
@@ -59,5 +60,5 @@ I need to keep learning how to better use CSS selectors and ways to transition a
 
 ## Author
 
-- Github - [Gaspar Mutti](https://www.your-site.com)
+- Github - [Gaspar Mutti](https://github.com/GasparMutti)
 - Frontend Mentor - [@gasparmutti](https://www.frontendmentor.io/profile/gasparmutti)
